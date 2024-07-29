@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFDB7E">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="75dp"
+        android:layout_height="94dp"
+        android:text="&lt;-"
+        android:textSize="40dp" />
+    <TextView
+        android:id="@+id/weight_history_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weight History"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/weight_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFDB7E"
+    android:gravity="center"
+    android:paddingTop="50dp">
+
+    <TextView
+        android:id="@+id/menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:text="Welcome"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/weight_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Weight History"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:background="?android:attr/selectableItemBackground"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/add_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Add Daily Weight"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:background="?android:attr/selectableItemBackground"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/future_goals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Future Goals"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:background="?android:attr/selectableItemBackground"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Notification"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:background="?android:attr/selectableItemBackground"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>

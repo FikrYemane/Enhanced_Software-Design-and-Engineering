@@ -1,3 +1,15 @@
+/*
+ * Notification.java
+ *
+ * Version: 1.0
+ * Author: Fikr Yemane
+ * Date: 04/15/2024
+ *
+ * This class manages the notification settings for the fitness tracking application.
+ * It includes switches for enabling and disabling various reminders such as daily reminders, weight goals, and milestone achievements.
+ * The class handles permissions for sending notifications and SMS, and it triggers notifications based on user preferences.
+ */
+
 package com.example.myapplication;
 
 import android.Manifest;

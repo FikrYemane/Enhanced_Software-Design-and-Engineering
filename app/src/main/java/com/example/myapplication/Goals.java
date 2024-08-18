@@ -1,3 +1,32 @@
+/**
+ * Goals.java
+ *
+ * Version: 1.3
+ * Author: Fikr Yemane
+ * Date: 08/13/2024
+ *
+ * Description:
+ * This class handles the goal-setting functionality within the fitness tracking application. It allows users to set
+ * weight goals, stores them in a database, and displays them dynamically in the UI. The class interacts with shared
+ * preferences for user sessions and with a database helper class for data storage and retrieval.
+ *
+ * Key Features:
+ * - Goal Management: Enables users to set and store weight goals along with their target dates.
+ * - Dynamic UI Updates: Dynamically displays the user's goals in the interface based on data retrieved from the database.
+ * - Database Interaction: Efficiently stores and retrieves goal data using the DBHelper class.
+ * - User Session Management: Uses shared preferences to maintain user session data across activities.
+ *
+ * Time Complexity Considerations:
+ * - Goal Insertion: O(1) - Inserting a new goal into the database is a constant-time operation.
+ * - UI Update: O(n) - Updating the UI with user goals involves iterating through the list of goals, where n is the number of goals.
+ *
+ * Efficiency and Optimization:
+ * - The class is designed to efficiently handle goal setting and display, ensuring a smooth user experience.
+ * - Proper error handling and validation ensure that only valid data is processed, reducing the risk of application errors.
+ * - The dynamic creation of UI components based on the number of goals allows for flexible and scalable UI updates.
+ */
+
+
 package com.example.myapplication;
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -92,6 +121,29 @@ public class Goals extends ComponentActivity {
 
 
     }
+    /**
+     * Updates the Goal View
+     *
+     * This method is responsible for updating the user interface with the user's
+     * goals fetched from the database. It clears any existing views in the
+     * `goal_container`, retrieves the current user's goals, and dynamically creates
+     * `TextView` elements to display each goal's value and associated date.
+     *
+     * Time Complexity: O(n)
+     * - The method involves iterating over the list of goals retrieved from the database,
+     *   where `n` is the number of goals. The complexity is linear relative to the
+     *   number of goals.
+     *
+     * Efficiency:
+     * - The method efficiently updates the UI by removing existing views before
+     *   adding new ones, ensuring no redundant views are displayed.
+     * - TextViews are created dynamically based on the number of goals, which allows
+     *   for flexibility in displaying varying numbers of goals without pre-defining
+     *   UI components.
+     *
+     * @return void
+     */
+
     private void updateGoal(){
         goal_container.removeAllViews();
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);

@@ -1,3 +1,15 @@
+/*
+ * UserLogin.java
+ *
+ * Version: 1.0
+ * Author: Fikr Yemane
+ * Date: 04/15/2024
+ *
+ * This class manages the user registration and login process for the fitness tracking application.
+ * It includes functionality for creating a new account by validating user input, checking for existing users,
+ * and inserting new user data into the database. The class also handles navigation to the sign-in activity.
+ */
+
 package com.example.myapplication;
 import android.annotation.SuppressLint;
 import android.content.Intent;

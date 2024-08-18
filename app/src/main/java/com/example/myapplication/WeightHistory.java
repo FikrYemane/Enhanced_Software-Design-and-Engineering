@@ -1,3 +1,31 @@
+/**
+ * WeightHistory.java
+ *
+ * Version: 1.3
+ * Author: Fikr Yemane
+ * Date: 08/13/2024
+ *
+ * Description:
+ * This class displays the history of weight entries for the user within the fitness tracking application.
+ * It retrieves weight data from the database and dynamically updates the user interface to show all weight
+ * entries along with the current date. It also includes a back button to navigate to the main menu.
+ *
+ * Key Features:
+ * - Data Retrieval: Fetches weight entries from the database for the current user.
+ * - Dynamic UI Update: Creates and displays `TextView` elements for each weight entry.
+ * - Navigation: Provides a back button to return to the main menu activity.
+ *
+ * Time Complexity Considerations:
+ * - Data Retrieval: O(n) - Retrieving weight data involves iterating over the list of weights, where `n` is the number of entries.
+ * - UI Update: O(n) - Dynamically adding `TextView` elements for each weight entry involves iterating over the list of weights.
+ *
+ * Efficiency and Optimization:
+ * - The method efficiently clears and updates the UI by removing existing views before adding new ones.
+ * - Weight entries are displayed with the current date, ensuring relevant and up-to-date information.
+ * - Uses linear time operations for data handling and UI updates, ensuring smooth performance for moderate-sized datasets.
+ */
+
+
 package com.example.myapplication;
 
 import androidx.activity.ComponentActivity;
@@ -62,22 +90,28 @@ public class WeightHistory extends ComponentActivity {
 
 
     private void updateWeightHistory() {
-        // Clear existing views from weightContainer
-
+        // Clear all existing views from the weightContainer to prepare for new data
         weightContainer.removeAllViews();
+
+        // Retrieve shared preferences to get stored username and password
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
         String username = sharedPreferences.getString(USERNAME, null);
         String password = sharedPreferences.getString(PASSWORD, null);
+
+        // Fetch the list of weights associated with the username from the database
         ArrayList<Double> importedList = db.getWeights(username);
-        // Get today's date
+
+        // Get the current date to be displayed alongside each weight
         Date today = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
 
-        // Loop through the list of imported weights and add TextViews dynamically
+        // Iterate through the list of weights and dynamically create TextViews to display them
         for (int i = 0; i < importedList.size(); i++) {
+            // Create a string for the weight and date information
             String weightText = "Weight " + (i + 1) + ": " + importedList.get(i);
             String dateText = "Date: " + dateFormat.format(today);
 
+            // Initialize a new TextView for displaying weight information
             TextView textView = new TextView(this);
             textView.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
@@ -88,9 +122,10 @@ public class WeightHistory extends ComponentActivity {
             textView.setTextColor(getResources().getColor(R.color.black));
             textView.setPadding(0, 50, 0, 0);
             textView.setTypeface(null, Typeface.BOLD);
+
+            // Add the newly created TextView to the weightContainer
             weightContainer.addView(textView);
         }
-
-
     }
+
 }

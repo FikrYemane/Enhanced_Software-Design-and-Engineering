@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Author: Fikr Yemane
+    Date: 07/29/2024
+    Description: XML layout for an Android activity to view main menu.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFDB7E"
     android:gravity="center"
+    android:orientation="vertical"
     android:paddingTop="50dp">
 
     <TextView
@@ -22,52 +27,52 @@
         android:id="@+id/weight_history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        android:text="Weight History"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        android:layout_marginTop="20dp"
         android:background="?android:attr/selectableItemBackground"
+        android:text="Weight History"
         android:textAllCaps="false"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/add_weight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        android:text="Add Daily Weight"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        android:layout_marginTop="20dp"
         android:background="?android:attr/selectableItemBackground"
+        android:text="Add Daily Weight"
         android:textAllCaps="false"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/future_goals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        android:text="Future Goals"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        android:layout_marginTop="20dp"
         android:background="?android:attr/selectableItemBackground"
+        android:text="Future Goals"
         android:textAllCaps="false"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/notification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        android:text="Notification"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        android:layout_marginTop="20dp"
         android:background="?android:attr/selectableItemBackground"
+        android:text="Notification"
         android:textAllCaps="false"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

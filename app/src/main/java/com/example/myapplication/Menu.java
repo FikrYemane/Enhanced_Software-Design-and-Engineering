@@ -1,4 +1,16 @@
 // Menu.java
+/*
+ * Menu.java
+ *
+ * Version: 1.0
+ * Author: Fikr Yemane
+ * Date: 04/15/2024
+ *
+ * This class represents the main menu of the fitness tracking application.
+ * It provides navigation to various features including adding weight, viewing weight history, setting goals, and managing notifications.
+ * The class interacts with shared preferences for storing user session data and passes user information between activities.
+ */
+
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
